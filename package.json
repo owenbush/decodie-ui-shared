@@ -11,20 +11,34 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles/main.css"
+    "./styles.css": "./dist/styles/main.css",
+    "./sanitize": {
+      "types": "./dist/sanitize.d.ts",
+      "import": "./dist/sanitize.js"
+    }
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsc && cp -r src/styles dist/styles",
-    "prepublishOnly": "npm run build"
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/owenbush/decodie-ui-shared.git"
+  },
+  "dependencies": {
+    "rehype-raw": "^7.0.0",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
   }
 }
