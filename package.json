@@ -1,0 +1,30 @@
+{
+  "name": "@owenbush/decodie-ui-shared",
+  "version": "0.1.0",
+  "description": "Shared styles, utilities, and constants for Decodie UI consumers",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles/main.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && cp -r src/styles dist/styles",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/owenbush/decodie-ui-shared.git"
+  }
+}
