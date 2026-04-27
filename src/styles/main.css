@@ -1557,6 +1557,37 @@ code[class*="language-"] {
   margin-left: 0.35rem;
 }
 
+/*
+ * Stale badge — entry's source files have changed since verified_sha.
+ * Set by /decodie:flag-stale; cleared by /decodie:verify.
+ */
+.stale-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--amber);
+  background: rgba(251, 191, 36, 0.12);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.35rem;
+}
+
+/* Verified SHA — short commit hash shown next to a verified entry */
+.verified-sha {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--bg-deep);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  margin-left: 0.35rem;
+}
+
 /* Learned button */
 .btn-learned {
   background: transparent;
