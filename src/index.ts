@@ -98,7 +98,8 @@ export type DecisionType =
   | "rationale"
   | "pattern"
   | "warning"
-  | "convention";
+  | "convention"
+  | "overview";
 
 export type Lifecycle = "active" | "superseded" | "archived";
 
